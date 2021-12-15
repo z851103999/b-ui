@@ -1,0 +1,149 @@
+@import '../style/base.less';
+
+.@{css-prefix} {
+  &.button {
+    display: inline-block;
+    border-radius: @border-radius;
+    border-width: 0;
+    line-height: 1em;
+    min-height: 1em;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    font-size: @base-font-size;
+    font-weight: 700;
+    padding: @button-padding;
+    color: rgba(0, 0, 0, 0.6);
+    background: #e0e1e2;
+    text-decoration: none;
+    font-family: 'Lato', 'proxima-nova', 'Helvetica Neue', Arial, sans-serif;
+    outline: none;
+    vertical-align: middle;
+    zoom: 1;
+    .user-select(none);
+    .transition(all 0.1s linear);
+
+    &.active,
+    &:hover,
+    &:focus {
+      background-color: #c0c1c2;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    // type
+    &.basic {
+      .type-basic;
+    }
+
+    &.positive {
+      .type-positive;
+    }
+
+    &.negative {
+      .type-negative;
+    }
+
+    &.primary {
+      .type-primary;
+    }
+
+    // size
+    .font-sizes;
+
+    // shape
+    &.circle {
+      border-radius: 10em;
+    }
+
+    .disabled;
+
+    &.loading {
+      position: relative;
+      .loading(0.9em, 0.2em);
+
+      color: transparent !important;
+
+      &::after {
+        border-color: #fff transparent transparent;
+      }
+    }
+  }
+
+  &.buttons {
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    vertical-align: baseline;
+    //margin: 0 .25em 0 0;
+    margin: 0;
+
+    .button {
+      border-radius: 0;
+      font-size: inherit;
+    }
+
+    .button:first-child {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+
+    .button:last-child {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+
+    // type
+    &.basic {
+      .button {
+        .type-basic;
+      }
+    }
+
+    &.positive {
+      .button {
+        .type-positive;
+      }
+    }
+
+    &.negative {
+      .button {
+        .type-negative;
+      }
+    }
+
+    &.primary {
+      .button {
+        .type-primary;
+      }
+    }
+
+    // size
+    .font-sizes;
+  }
+}
+
+@-webkit-keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
