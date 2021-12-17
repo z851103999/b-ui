@@ -98,6 +98,13 @@ module.exports = {
         doc: 'icon',
         type: 3,
       },
+      {
+        text: {
+          'zh-CN': 'Layout 布局',
+        },
+        doc: 'col',
+        type: 4,
+      },
     ],
   },
   mobile: {

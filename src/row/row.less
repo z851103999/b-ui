@@ -1,0 +1,28 @@
+.b-row {
+  display: flex;
+  position: border-box;
+  box-sizing: border-box;
+
+  &.b-justify {
+    &--center {
+      justify-content: center;
+    }
+    &--end {
+      justify-content: flex-end;
+    }
+    &--space-around {
+      justify-content: space-around;
+    }
+    &--space-between {
+      justify-content: space-between;
+    }
+  }
+  &.b-align {
+    &--middle {
+      align-items: center;
+    }
+    &--bottom {
+      align-items: flex-end;
+    }
+  }
+}
