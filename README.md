@@ -4,6 +4,7 @@
 - [x] Button
 - [x] Icon
 - [x] Layout
+- [x] Space 
 - [ ] Grid
 - [ ] Menu
 - [ ] Card
