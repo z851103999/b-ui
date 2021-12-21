@@ -24,6 +24,8 @@ export const isBool = (val: unknown): val is boolean => typeof val === 'boolean'
 
 export const isNumber = (val: unknown): val is number => typeof val === 'number'
 
+export const isArray = (val: unknown): val is Array<any> => Array.isArray(val)
+
 export const isURL = (val: string) => /^(http)|(\.*\/)/.test(val)
 
 export const isRem = (value: unknown) => isString(value) && value.endsWith('rem')

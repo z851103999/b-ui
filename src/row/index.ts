@@ -1,4 +1,4 @@
-import Row from './Row.vue'
+import Row from './Row.tsx'
 import type { App } from 'vue'
 
 Row.install = function (app: App) {

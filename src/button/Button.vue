@@ -1,12 +1,12 @@
 <template>
   <button :class="classObject" @click="clickHandler">
-    <slot> </slot>
+    <slot></slot>
   </button>
 </template>
 
 <script setup lang="ts">
 import { PropType, defineProps, computed, defineEmits } from 'vue'
-import { ISize, IType } from '../utils/type'
+import { ButtonSize, ButtonType } from './props'
 
 const props = defineProps({
   active: {
@@ -22,13 +22,13 @@ const props = defineProps({
     default: false,
   },
   type: {
-    type: String as PropType<IType>,
+    type: String as PropType<ButtonType>,
   },
   shape: {
     type: String as PropType<'circle'>,
   },
   size: {
-    type: String as PropType<ISize>,
+    type: String as PropType<ButtonSize>,
   },
 })
 const classObject = computed(() => {

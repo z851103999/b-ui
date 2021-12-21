@@ -105,6 +105,13 @@ module.exports = {
         doc: 'col',
         type: 4,
       },
+      {
+        text: {
+          'zh-CN': 'Space 间隔',
+        },
+        doc: 'space',
+        type: 5,
+      },
     ],
   },
   mobile: {
