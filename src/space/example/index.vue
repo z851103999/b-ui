@@ -11,8 +11,8 @@
 
 <script>
 import AppType from '@varlet/cli/site/mobile/components/AppType'
-import ColumnSpace from '../ColumnSpace.vue'
-import SizeSpace from '../SizeSpace.vue'
+import ColumnSpace from './ColumnSpace.vue'
+import SizeSpace from './SizeSpace.vue'
 import FlexSpace from './FlexSpace'
 
 export default {

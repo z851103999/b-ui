@@ -139,22 +139,14 @@
 @largestSmallMonitor: (@largeMonitorBreakpoint - 1px);
 @largestLargeMonitor: (@widescreenMonitorBreakpoint - 1px);
 
-//.warning() {
-//  box-shadow: 0 0 0 1px #A9D5DE inset, 0 0 0 0 transparent;
-//  background: #F8FFFF;
-//  color: #276F86;
-//}
-//.info() {
-//
-//}
-
 .padding() {
   padding: @padding-vertical @padding-horizontal;
 }
+
 .box-shadow() {
   box-shadow: 0 2px 3px 0 @border-color;
-  //box-shadow: 0 2px 3px hsla(0,0%,4%,.1), 0 0 0 1px hsla(0,0%,4%,.1);
 }
+
 .border() {
   border: @border-style;
 }
@@ -178,6 +170,7 @@
     box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.3) inset;
   }
 }
+
 .type-positive() {
   color: #fff;
   background-color: @green-color !important;
@@ -188,6 +181,7 @@
     background: @green-hover-color !important;
   }
 }
+
 .type-negative() {
   color: #fff;
   background-color: @red-color !important;
@@ -198,6 +192,7 @@
     background-color: @red-hover-color !important;
   }
 }
+
 .type-primary() {
   color: #fff;
   background-color: @primary-color !important;
@@ -217,6 +212,7 @@
   &.@{color-name} {
     color: #fff;
     background-color: @@color-value;
+
     &:focus,
     &:hover,
     &.active {
@@ -232,6 +228,7 @@
   @color-value: '@{color-name}-color';
   &.@{color-name} {
     border-color: @@color-value;
+
     > .header {
       color: #fff;
       background: @@color-value;
@@ -266,27 +263,35 @@
 .size-mini() {
   font-size: @base-font-size - 0.4;
 }
+
 .size-tiny() {
   font-size: @base-font-size - 0.3;
 }
+
 .size-small() {
   font-size: @base-font-size - 0.2;
 }
+
 .size-medium() {
   font-size: @base-font-size - 0.1;
 }
+
 .size-normal() {
   font-size: @base-font-size;
 }
+
 .size-large() {
   font-size: @base-font-size + 0.15;
 }
+
 .size-big() {
   font-size: @base-font-size + 0.25;
 }
+
 .size-huge() {
   font-size: @base-font-size + 0.35;
 }
+
 .size-massive() {
   font-size: @base-font-size + 0.45;
 }
@@ -317,6 +322,7 @@
     .size-massive;
   }
 }
+
 ._disabled() {
   cursor: default;
   opacity: 0.55 !important;
@@ -324,6 +330,7 @@
   box-shadow: none !important;
   pointer-events: none !important;
 }
+
 .disabled() {
   &.disabled {
     ._disabled;
@@ -354,6 +361,7 @@
   -ms-flex-align: @v;
   align-items: @v;
 }
+
 .justify-content(@v) {
   -webkit-justify-content: @v;
   -ms-flex-pack: @v;

@@ -112,6 +112,13 @@ module.exports = {
         doc: 'space',
         type: 5,
       },
+      {
+        text: {
+          'zh-CN': 'Card 卡片',
+        },
+        doc: 'card',
+        type: 6,
+      },
     ],
   },
   mobile: {
