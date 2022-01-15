@@ -12,22 +12,20 @@ createApp().use(BCard)
 ### 基本样式
 
 ```vue
-import TitleCard from '../example/TitleCard.vue'
+import TitleCard from '../example/TitleCard'
 ```
 
 ```html
-
 <b-card title='秋风' subtitle='秋风subtitle' :description='description'></b-card>
 ```
 
 ### 添加图片内容
 
 ```vue
-import ImageCard from '../example/ImageCard.vue'
+import ImageCard from '../example/ImageCard'
 ```
 
 ```html
-
 <template>
   <b-card
     title='风景'

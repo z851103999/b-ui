@@ -6,6 +6,7 @@
 - [x] Icon
 - [x] Layout
 - [x] Space 
+- [x] Breadcrumb
 - [ ] Grid
 - [ ] Menu
 - [ ] Card

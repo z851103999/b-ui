@@ -16,7 +16,6 @@ import ColumnSpace from '../example/ColumnSpace.vue'
 ```
 
 ```html
-
 <template>
   <b-space direction='column' size='large'>
     <b-button>Button1</b-button>
@@ -33,7 +32,6 @@ import SizeSpace from '../example/SizeSpace.vue'
 ```
 
 ```html
-
 <template>
   <b-space :size='[20, 20]'>
     <b-button>Button1</b-button>
@@ -50,7 +48,6 @@ import FlexSpace from '../example/FlexSpace.vue'
 ```
 
 ```html
-
 <template>
   <b-space justify='end'>
     <b-button>button1</b-button>

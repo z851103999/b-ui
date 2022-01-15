@@ -17,16 +17,15 @@
   "license": "MIT",
   "scripts": {
     "husky": "husky install",
+    "preinstall": "npx only-allow pnpm",
     "commit": "git-cz",
     "dev": "varlet-cli dev",
     "build": "varlet-cli build",
     "preview": "varlet-cli preview",
     "compile": "varlet-cli compile",
-    "create": "varlet-cli create",
     "lint": "varlet-cli lint",
-    "genlog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "genAllLog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "release": "yarn compile && release-it",
+    "changelog": "varlet-cli changelog",
+    "release": "pnpm compile && varlet-cli release",
     "test": "varlet-cli jest",
     "test:watch": "varlet-cli jest -w",
     "test:watchAll": "varlet-cli jest -wa"
@@ -35,8 +34,29 @@
     "vue": "^3.2.16"
   },
   "devDependencies": {
-    "@varlet/cli": "1.23.11",
-    "vue": "3.2.16"
+    "@types/jest": "^27.4.0",
+    "@varlet/cli": "1.24.11",
+    "@varlet/eslint-config": "1.24.11",
+    "@varlet/icons": "1.24.11",
+    "@varlet/stylelint-config": "1.24.11",
+    "@varlet/touch-emulator": "1.24.11",
+    "@vue/test-utils": "2.0.0-rc.6",
+    "clipboard": "^2.0.6",
+    "eslint": "^7.30.0",
+    "lint-staged": "^10.5.0",
+    "live-server": "^1.2.1",
+    "lodash-es": "^4.17.21",
+    "prettier": "^2.3.2",
+    "stylelint": "^13.13.1",
+    "typescript": "^4.4.4",
+    "vue": "3.2.16",
+    "vue-jest": "^5.0.0-alpha.10",
+    "vue-router": "4.0.12"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,vue,less}": "prettier --write",
+    "*.{ts,tsx,js,vue}": "eslint --fix",
+    "*.{vue,css,less}": "stylelint --fix"
   },
   "release-it": {
     "git": {
@@ -56,11 +76,6 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,vue,less}": "prettier --write",
-    "*.{ts,tsx,js,vue}": "eslint --fix",
-    "*.{vue,css,less}": "stylelint --fix"
   },
   "eslintConfig": {
     "root": true,
@@ -88,19 +103,13 @@
       "site/**",
       "coverage/**",
       "public/**",
-      "highlight/**"
+      "highlight/**",
+      ".varlet/**"
     ]
   },
   "browserslist": [
     "Chrome >= 51",
     "iOS >= 10"
   ],
-  "files": [
-    "es",
-    "lib",
-    "umd",
-    "highlight",
-    "types",
-    "README.md"
-  ]
+  "packageManager": "pnpm@6.24.3"
 }

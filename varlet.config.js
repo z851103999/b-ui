@@ -119,6 +119,13 @@ module.exports = {
         doc: 'card',
         type: 6,
       },
+      {
+        text: {
+          'zh-CN': 'BreadCrumn 面包屑',
+        },
+        doc: 'breadcrumb',
+        type: 7,
+      },
     ],
   },
   mobile: {

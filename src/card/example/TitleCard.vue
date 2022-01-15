@@ -2,7 +2,7 @@
   <b-card title="秋风" subtitle="秋风subtitle" :description="description"></b-card>
 </template>
 <script>
-import BCard from '../Card.vue'
+import BCard from '../Card'
 
 export default {
   components: {

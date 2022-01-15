@@ -5,7 +5,7 @@
     :class="[
       `${namespace}--set`,
       isURL(name) ? 'b-icon__image' : `${namespace}-${nextName}`,
-      shrinking ? 'b-icon--shrinking' : null,
+      shrinking ? 'b-icon__shrinking' : null,
     ]"
     :style="{
       color,

@@ -1,0 +1,43 @@
+@import './_color.less';
+@import '../core/_font';
+@import '../theme/_font.less';
+
+@text-color: @b-text;
+@font-family: helvetica, arial, 'PingFang', 'Microsoft YaHei', 'Hiragino Sans GB', 'Microsoft JhengHei', sans-serif;
+@font-variant-base: tabular-nums;
+@body-background: @b-base-bg;
+@b-font-size: @b-font-size; // 12px
+@b-font-size-page-title: @b-font-size-page-title; // 16px
+
+.b-font-size-base {
+  font-size: @b-font-size; // 12px
+}
+
+.b-font-base {
+  .font-content(); // 12px normal 1.5
+}
+
+.b-font-size-modal-title {
+  font-size: @b-font-size-modal-title; // 18px
+}
+
+.b-font-modal-title {
+  .font-title(@b-font-size-modal-title); // 18px bold 1.5
+}
+
+.b-font-size-page-title {
+  font-size: @b-font-size-page-title; // 16px
+}
+
+.b-font-page-title {
+  .font-title(); // 16px bold 1.5
+}
+
+.b-font-size-secondary-title {
+  font-size: @b-font-size-card-title // 14px
+;
+}
+
+.b-font-secondary-title {
+  .font-title(@b-font-size-card-title); // 14px bold 1.5
+}

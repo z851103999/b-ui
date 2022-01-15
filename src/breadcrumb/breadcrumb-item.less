@@ -1,0 +1,42 @@
+@import '../style/theme/_color';
+@import '../style/theme/_font';
+@import '../style/theme/_animation';
+
+.b-breadcrumb-font-style {
+  font-size: @b-font-size;
+  color: @b-aide-text;
+  line-height: 18px;
+}
+
+.b-breadcrumb-item {
+  &:extend(.b-breadcrumb-font-style);
+
+  cursor: pointer;
+
+  &:hover {
+    color: @b-text;
+    text-decoration: none;
+  }
+
+  a,
+  span {
+    transition: color @b-animation-duration-slow @b-animation-ease-in-out-smooth;
+    text-decoration: none;
+    font-size: @b-font-size;
+  }
+
+  .is-link {
+    cursor: pointer;
+
+    &:hover {
+      color: @b-text;
+      text-decoration: none;
+    }
+  }
+}
+
+.b-breadcrumb-separator {
+  .b-breadcrumb-font-style;
+
+  margin: 0 4px;
+}

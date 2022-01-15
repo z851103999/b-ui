@@ -13,7 +13,7 @@
   </b-card>
 </template>
 <script>
-import BCard from '../Card.vue'
+import BCard from '../Card'
 import BButton from '../../button/Button'
 
 export default {
