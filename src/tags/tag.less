@@ -1,0 +1,68 @@
+@import '../style/theme/index.less';
+.b-tag {
+  display: inline-block;
+  margin: 4px;
+  .b-tag {
+    padding: 0 8px;
+    min-height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    border: 1px solid;
+    border-radius: @b-border-radius;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    &-default {
+      // border: 0;
+      color: @b-text;
+      border-color: @b-text;
+    }
+
+    &-success {
+      // border: 0;
+      color: @b-success-bg;
+      border-color: @b-success-line;
+    }
+
+    &-warning {
+      // border: 0;
+      color: @b-warning-bg;
+      border-color: @b-warning-line;
+    }
+
+    &-danger {
+      color: @b-danger;
+      background-color: @b-danger-bg;
+      border-color: @b-danger-line;
+    }
+
+    &-colorful {
+      background-color: #fff;
+    }
+
+    &-deletable {
+      padding-right: 32px;
+    }
+  }
+}
+
+.remove-button {
+  display: inline-block;
+  margin-left: 12px;
+  font-size: @b-font-size-icon;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  i {
+    /* 取消icon自带的偏移 */
+    vertical-align: 0;
+  }
+}

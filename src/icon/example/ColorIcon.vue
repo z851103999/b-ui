@@ -1,5 +1,6 @@
 <template>
   <b-icon name="yingyezhizhao" color="#2979ff"></b-icon>
+  <b-icon name="guanbi" color="#2979ff"></b-icon>
 </template>
 
 <script>

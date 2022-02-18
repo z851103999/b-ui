@@ -4,9 +4,9 @@
 
 ```js
 import { createApp } from 'vue'
-import { BSpacer } from 'b-ui'
+import { BTag } from 'b-ui'
 
-createApp().use(BSpacer)
+createApp().use(BTag)
 ```
 
 ### 垂直用法
@@ -73,7 +73,7 @@ import FlexSpace from '../example/FlexSpace.vue'
 ### Space Props 属性
 
 | 参数          | 说明   | 类型                                                | 可选值                                                       | 默认值    |
-|-------------|------|---------------------------------------------------|-----------------------------------------------------------|--------| 
+|-------------|------|---------------------------------------------------|-----------------------------------------------------------|--------| --
 | `align`     | _垂直排列方式_ | _string_                                          | _stretch_ _center_ _start_ _end_ _baseline_               | --     |
 | `justify`   | _水平排列方式_ | _string_                                          | _start_ _end_ _center_ _space-around_ _space-between_     | _start_ |
 | `size`      | _间距_ | _string_ _number_ _[string丨number,string丨number]_ | _mini:[4,4]_ _small:[6,6]_ _normal:[8,12]_ _large[12,80]_ | _normal_ |

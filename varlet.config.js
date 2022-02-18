@@ -121,21 +121,28 @@ module.exports = {
       },
       {
         text: {
-          'zh-CN': 'BreadCrumn 面包屑',
+          'zh-CN': 'BreadCrumb 面包屑',
         },
         doc: 'breadcrumb',
         type: 7,
       },
+      {
+        text: {
+          'zh-CN': 'Tag 标签',
+        },
+        doc: 'tags',
+        type: 8,
+      },
     ],
   },
-  mobile: {
-    redirect: '/home',
-    title: {
-      'zh-CN': '一个组件库',
-    },
-    header: {
-      i18n: null,
-      github: 'https://github.com/haoziqaq/varlet',
-    },
-  },
+  // mobile: {
+  //   redirect: '/home',
+  //   title: {
+  //     'zh-CN': '一个组件库',
+  //   },
+  //   header: {
+  //     i18n: null,
+  //     github: 'https://github.com/haoziqaq/varlet',
+  //   },
+  // },
 }

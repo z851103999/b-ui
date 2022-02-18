@@ -2,16 +2,16 @@
 #### vue3 TS 编写 有良好代码提示。
 #### 目前开发中，工作业余之外编写库，请勿在生产环境使用。
 #### 现在依托varlet ui快速生成组件库模版。后续迁移到Lerna管理组件库
-- [x] Button
-- [x] Icon
-- [x] Layout
-- [x] Space 
-- [x] Breadcrumb
+- [x] Button 按钮
+- [x] Icon  Icon
+- [x] Layout  布局
+- [x] Space 间隔
+- [x] Breadcrumb 面包屑
 - [ ] Grid
 - [ ] Menu
-- [ ] Card
+- [x] Card  卡片
 - [ ] DropDown
-- [ ] Tag
+- [x] Tag  标签
 - [ ] Switch
 - [ ] Cascader
 - [ ] DatePicker
