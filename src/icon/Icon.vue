@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, nextTick, PropType, ref, Ref, watch } from 'vue'
+import { nextTick, PropType, ref, Ref, watch } from 'vue'
 import { isURL, toNumber, toSizeUnit } from '../utils/utils'
 
 const props = defineProps({

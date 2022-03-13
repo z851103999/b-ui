@@ -34,24 +34,28 @@
     "vue": "^3.2.16"
   },
   "devDependencies": {
-    "@types/jest": "^27.4.0",
-    "@varlet/cli": "1.24.11",
-    "@varlet/eslint-config": "1.24.11",
-    "@varlet/icons": "1.24.11",
-    "@varlet/stylelint-config": "1.24.11",
-    "@varlet/touch-emulator": "1.24.11",
-    "@vue/test-utils": "2.0.0-rc.6",
-    "clipboard": "^2.0.6",
-    "eslint": "^7.30.0",
-    "lint-staged": "^10.5.0",
-    "live-server": "^1.2.1",
-    "lodash-es": "^4.17.21",
-    "prettier": "^2.3.2",
-    "stylelint": "^13.13.1",
-    "typescript": "^4.4.4",
-    "vue": "3.2.16",
-    "vue-jest": "^5.0.0-alpha.10",
-    "vue-router": "4.0.12"
+    "@types/jest": "27.4.1",
+    "@varlet/cli": "1.26.4",
+    "@varlet/eslint-config": "1.26.4",
+    "@varlet/icons": "1.26.4",
+    "@varlet/stylelint-config": "1.26.4",
+    "@varlet/touch-emulator": "1.26.4",
+    "@vue/test-utils": "1.3.0",
+    "clipboard": "2.0.10",
+    "eslint": "8.11.0",
+    "lint-staged": "12.3.5",
+    "live-server": "1.2.1",
+    "lodash-es": "4.17.21",
+    "prettier": "2.5.1",
+    "stylelint": "14.5.3",
+    "typescript": "4.6.2",
+    "vue": "3.2.31",
+    "vue-jest": "3.0.7",
+    "vue-router": "4.0.14"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --allow-empty --concurrent false",
+    "commit-msg": "npx --no-install varlet-cli commit-lint $1"
   },
   "lint-staged": {
     "*.{ts,tsx,js,vue,less}": "prettier --write",
@@ -111,5 +115,12 @@
     "Chrome >= 51",
     "iOS >= 10"
   ],
-  "packageManager": "pnpm@6.24.3"
+  "packageManager": "pnpm@6.24.3",
+  "files": [
+    "es",
+    "lib",
+    "umd",
+    "highlight",
+    "types"
+  ]
 }

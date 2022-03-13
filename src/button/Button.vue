@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { PropType, defineProps, computed, defineEmits } from 'vue'
+import { PropType, computed, defineEmits } from 'vue'
 import { ButtonSize, ButtonType } from './props'
 
 const props = defineProps({
