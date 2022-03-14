@@ -7,6 +7,7 @@
 - [x] Layout  布局
 - [x] Space 间隔
 - [x] Breadcrumb 面包屑
+- [x] Slider 滑块
 - [ ] Grid
 - [ ] Menu
 - [x] Card  卡片

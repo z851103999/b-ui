@@ -18,7 +18,7 @@ import BasicBreadcrumb from '../example/BasicBreadcrumb.vue'
         <b-breadcrumb>
             <b-breadcrumb-item to="{ path: '/' }">Homepage</b-breadcrumb-item>
             <b-breadcrumb-item>
-                <a href="/">DevUI</a>
+                <a href="/">UI</a>
             </b-breadcrumb-item>
             <b-breadcrumb-item>
                 <span>Breadcrumb</span>

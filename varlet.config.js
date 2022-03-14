@@ -133,6 +133,13 @@ module.exports = {
         doc: 'tags',
         type: 8,
       },
+      {
+        text: {
+          'zh-CN': 'Slider 滑动输入条',
+        },
+        doc: 'slider',
+        type: 9,
+      },
     ],
   },
   // mobile: {

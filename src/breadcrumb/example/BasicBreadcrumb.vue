@@ -3,7 +3,7 @@
     <b-breadcrumb>
       <b-breadcrumb-item to="{ path: '/' }">Homepage</b-breadcrumb-item>
       <b-breadcrumb-item>
-        <a href="/button">DevUI</a>
+        <a href="/button">UI</a>
       </b-breadcrumb-item>
       <b-breadcrumb-item>
         <span>Breadcrumb</span>

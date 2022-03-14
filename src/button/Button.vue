@@ -4,10 +4,11 @@
   </button>
 </template>
 
-<script setup lang="ts">
-import { PropType, computed, defineEmits } from 'vue'
+<script lang="ts" setup>
+import { PropType, computed } from 'vue'
 import { ButtonSize, ButtonType } from './props'
 
+// eslint-disable-next-line no-undef
 const props = defineProps({
   active: {
     type: Boolean,
@@ -31,6 +32,9 @@ const props = defineProps({
     type: String as PropType<ButtonSize>,
   },
 })
+// eslint-disable-next-line no-undef
+const emits = defineEmits(['click'])
+
 const classObject = computed(() => {
   return [
     'b button',
@@ -42,8 +46,6 @@ const classObject = computed(() => {
     props.size,
   ]
 })
-
-const emits = defineEmits(['click'])
 
 const clickHandler = (e: Event) => {
   emits('click', e)
