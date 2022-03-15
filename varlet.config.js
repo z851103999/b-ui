@@ -140,6 +140,13 @@ module.exports = {
         doc: 'slider',
         type: 9,
       },
+      {
+        text: {
+          'zh-CN': 'Switch 开关',
+        },
+        doc: 'switch',
+        type: 10,
+      },
     ],
   },
   // mobile: {

@@ -13,9 +13,12 @@
 - [x] Card  卡片
 - [ ] DropDown
 - [x] Tag  标签
-- [ ] Switch
+- [x] Switch
 - [ ] Cascader
 - [ ] DatePicker
 - [ ] Message
 - [ ] Tree
 #### 初步构想编写如上组件
+
+#### 代办列表
+[ ] 3月15日 switch编写完成，css等待重构，后续其他组件测试编写
