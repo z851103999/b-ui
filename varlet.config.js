@@ -147,6 +147,13 @@ module.exports = {
         doc: 'switch',
         type: 10,
       },
+      {
+        text: {
+          'zh-CN': 'Alert 提示',
+        },
+        doc: 'alert',
+        type: 11,
+      },
     ],
   },
   // mobile: {

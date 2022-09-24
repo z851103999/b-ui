@@ -1,0 +1,201 @@
+@import './src/style/theme/_color';
+@import './src/style/theme/_font';
+@import './src/style/theme/_shadow';
+@import './src/style/theme/_corner';
+@import '../style/index';
+
+.b-alert {
+  color: @b-text;
+  font-size: @b-font-size;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  line-height: 24px;
+  border-radius: @b-border-radius;
+
+  // 默认换行规则
+  word-break: normal;
+  // 此属性指定 UA 是否可以在一行内的其他不允许的点处中断以防止溢出，当否则不可中断的字符串太长而无法放入行框时。只有当空白允许换行时它才有效。
+  word-wrap: break-word;
+
+  .b-close {
+    color: @b-text;
+    opacity: 1;
+    line-height: 26px;
+    height: 24px;
+    display: inline;
+    float: right;
+
+    & > svg path {
+      fill: @b-light-text;
+    }
+
+    span {
+      color: @b-text;
+      font-size: @b-font-size;
+      font-weight: bold;
+    }
+  }
+
+  &.b-alert-success {
+    background-color: @b-success-bg;
+    border-color: @b-success-line;
+    color: @b-text;
+
+    .b-close {
+      & > svg path {
+        fill: @b-success-line;
+      }
+    }
+  }
+
+  &.b-alert-warning {
+    background-color: @b-warning-bg;
+    border-color: @b-warning-line;
+    color: @b-text;
+
+    .b-close {
+      & > svg path {
+        fill: @b-warning-line;
+      }
+    }
+  }
+
+  &.b-alert-danger {
+    background-color: @b-danger-bg;
+    border-color: @b-danger-line;
+    color: @b-text;
+
+    .b-close {
+      & > svg path {
+        fill: @b-danger-line;
+      }
+    }
+  }
+
+  &.b-alert-info {
+    background-color: @b-info-bg;
+    border-color: @b-info-line;
+    color: @b-text;
+
+    .b-close {
+      & > svg path {
+        fill: @b-info-line;
+      }
+    }
+  }
+
+  &.b-alert-simple {
+    background-color: @b-simple-bg;
+    border-color: @b-simple-line;
+    color: @b-text;
+
+    .b-close {
+      & > svg path {
+        fill: @b-info-line;
+      }
+    }
+  }
+
+  svg.b-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    transform: translateY(-1px);
+  }
+
+  .b-icon.b-icon-success {
+    & > g {
+      path {
+        fill: @b-success-line;
+      }
+    }
+
+    polygon {
+      fill: @b-light-text;
+      stroke: @b-light-text;
+    }
+  }
+
+  .b-icon.b-icon-warning {
+    & > g {
+      path.b-icon-warning-outer {
+        fill: @b-warning-line;
+      }
+
+      path.b-icon-warning-inner {
+        fill: @b-light-text;
+        stroke: @b-light-text;
+      }
+    }
+  }
+
+  .b-icon.b-icon-info {
+    & > g {
+      path.b-icon-info-outer {
+        fill: @b-info-line;
+      }
+
+      path.b-icon-info-inner {
+        fill: @b-light-text;
+        stroke: @b-light-text;
+      }
+    }
+  }
+
+  .b-icon.b-icon-error {
+    & > g {
+      path.b-icon-error-outer {
+        fill: @b-danger-line;
+      }
+
+      path.b-icon-error-inner {
+        fill: @b-light-text;
+        stroke: @b-light-text;
+      }
+    }
+  }
+
+  .b-icon.b-icon-simple {
+    & > g {
+      path.b-icon-simple-outer {
+        fill: @b-simple-line;
+      }
+
+      path.b-icon-simple-inner {
+        fill: @b-light-text;
+        stroke: @b-light-text;
+      }
+    }
+  }
+}
+
+.b-alert-icon {
+  margin-right: 4px;
+}
+
+.b-alter-close {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  transform-origin: 50% 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.b-alert-leave-active {
+  animation: alertUpOut 0.3s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes alertUpOut {
+  0% {
+    transform: scaleY(1);
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: 0% 0%;
+    opacity: 0;
+  }
+}

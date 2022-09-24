@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test space example 1`] = `
+"<div class=\\"app-type\\"></div>
+<div class=\\"b-space b-box\\" style=\\"flex-direction: column; justify-content: start; flex-wrap: nowrap;\\">
+  <div style=\\"margin: 0px 0px 12px 0px;\\"><button class=\\"b button\\">Button1</button></div>
+  <div style=\\"margin: 0px 0px 12px 0px;\\"><button class=\\"b button\\">Button2</button></div>
+  <div style=\\"margin: 0px;\\"><button class=\\"b button\\">Button3</button></div>
+</div>
+<div class=\\"app-type\\"></div>
+<div class=\\"b-space b-box\\" style=\\"flex-direction: row; justify-content: start; flex-wrap: nowrap; margin: -10px 0px;\\">
+  <div style=\\"margin: 10px 20px 10px 0px;\\"><button class=\\"b button\\">Button1</button></div>
+  <div style=\\"margin: 10px 20px 10px 0px;\\"><button class=\\"b button\\">Button2</button></div>
+  <div style=\\"margin: 10px 0px;\\"><button class=\\"b button\\">Button3</button></div>
+</div>
+<div class=\\"app-type\\"></div>
+<div class=\\"b-space b-box\\" style=\\"flex-direction: row; justify-content: end; flex-wrap: nowrap; margin: -4px 0px 20px 0px;\\">
+  <div style=\\"margin: 4px 12px 4px 0px;\\"><button class=\\"b button primary\\">button1</button></div>
+  <div style=\\"margin: 4px 0px;\\"><button class=\\"b button primary\\">button1</button></div>
+</div>
+<div class=\\"b-space b-box\\" style=\\"flex-direction: row; justify-content: space-around; flex-wrap: nowrap; margin: -4px 0px 20px 0px;\\">
+  <div style=\\"margin: 4px 6px;\\"><button class=\\"b button positive\\">button1</button></div>
+  <div style=\\"margin: 4px 6px;\\"><button class=\\"b button positive\\">button1</button></div>
+</div>
+<div class=\\"b-space b-box\\" style=\\"flex-direction: row; justify-content: center; flex-wrap: nowrap; margin: -4px 0px 20px 0px;\\">
+  <div style=\\"margin: 4px 12px 4px 0px;\\"><button class=\\"b button negative\\">button1</button></div>
+  <div style=\\"margin: 4px 0px;\\"><button class=\\"b button negative\\">button1</button></div>
+</div>
+<div class=\\"b-space b-box\\" style=\\"flex-direction: row; justify-content: space-between; flex-wrap: nowrap; margin: -4px 0px 20px 0px;\\">
+  <div style=\\"margin: 4px 6px 4px 0px;\\"><button class=\\"b button basic\\">button1</button></div>
+  <div style=\\"margin: 4px 0px 4px 6px;\\"><button class=\\"b button basic\\">button1</button></div>
+</div>"
+`;

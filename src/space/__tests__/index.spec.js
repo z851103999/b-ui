@@ -1,10 +1,9 @@
-import example from '../example'
 import Spacer from '..'
 import { createApp } from 'vue'
 import { mount } from '@vue/test-utils'
 
 test('test space example', () => {
-  const wrapper = mount(example)
+  const wrapper = mount()
   expect(wrapper.html()).toMatchSnapshot()
 })
 

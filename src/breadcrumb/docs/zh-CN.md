@@ -1,6 +1,6 @@
 # 按钮
 
-### 引入
+## 引入
 
 ```js
 import { BBreadcrumb,BBreadcrumbItem } from 'basic-ui'

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test tags example 1`] = `
+"<div class=\\"app-type\\"></div>
+<div class=\\"b-tag\\"><span class=\\"b-tag b-tag-default \\" style=\\"display: block;\\" title=\\"\\">标签一<!----></span></div>
+<div class=\\"b-tag\\"><span class=\\"b-tag b-tag-primary \\" style=\\"display: block; color: rgb(94, 124, 224);\\" title=\\"\\">标签二<!----></span></div>
+<div class=\\"b-tag\\"><span class=\\"b-tag b-tag-success \\" style=\\"display: block; color: rgb(80, 212, 171);\\" title=\\"\\">标签三<!----></span></div>
+<div class=\\"b-tag\\"><span class=\\"b-tag b-tag-warning \\" style=\\"display: block; color: rgb(250, 194, 10);\\" title=\\"\\">标签四<!----></span></div>
+<div class=\\"b-tag\\"><span class=\\"b-tag b-tag-danger \\" style=\\"display: block; color: rgb(246, 111, 106);\\" title=\\"\\">标签五<!----></span></div>
+<div class=\\"b-tag\\"><span class=\\"b-tag b-tag-primary \\" style=\\"display: block; color: rgb(255, 255, 255); background-color: rgb(94, 124, 224);\\" title=\\"\\">点击变化<!----></span></div>
+<div class=\\"b-tag\\"><span class=\\"b-tag b-tag-default b-tag-deletable\\" style=\\"display: block;\\" title=\\"\\">默认tag<a class=\\"remove-button\\"><i class=\\"b-icon iconfont b-icon--set b-icon-guanbi\\" style=\\"font-size: 12px;\\"></i></a></span></div>
+<div class=\\"b-tag\\"><span class=\\"b-tag b-tag-primary b-tag-deletable\\" style=\\"display: block; color: rgb(94, 124, 224);\\" title=\\"\\">primary-tag2<a class=\\"remove-button\\"><i class=\\"b-icon iconfont b-icon--set b-icon-guanbi\\" style=\\"color: rgb(94, 124, 224); font-size: 12px;\\"></i></a></span></div>
+<div class=\\"b-tag\\"><span class=\\"b-tag b-tag-colorful b-tag-deletable\\" style=\\"display: block; color: rgb(221, 52, 176); background-color: rgb(255, 255, 255);\\" title=\\"\\">自定义tag3<a class=\\"remove-button\\"><i class=\\"b-icon iconfont b-icon--set b-icon-guanbi\\" style=\\"color: rgb(221, 52, 176); font-size: 12px;\\"></i></a></span></div>
+<div class=\\"b-tag\\"><span class=\\"b-tag b-tag-default \\" style=\\"display: block;\\" title=\\"\\">添加属性tag<!----></span></div>
+<div class=\\"b-tag\\"><span class=\\"b-tag b-tag-primary \\" style=\\"display: block; color: rgb(94, 124, 224);\\" title=\\"\\">默认tag是有边框的<!----></span></div>
+<div class=\\"b-tag\\"><span class=\\"b-tag b-tag-colorful \\" style=\\"display: block; color: red; background-color: rgb(255, 255, 255);\\" title=\\"\\">默认tag是有边框的<!----></span></div>"
+`;
