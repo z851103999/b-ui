@@ -1,5 +1,5 @@
 import Alert from '../Alert'
-import { createApp, h } from 'vue'
+import { h } from 'vue'
 import { mount } from '@vue/test-utils'
 
 describe('alert basic', () => {

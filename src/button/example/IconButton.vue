@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <b-button loading>Loading</b-button>
-  </div>
+  <b-button icon="yingyezhizhao" variant="solid" size="md">yingyezhizhao</b-button>
 </template>
 
 <script>
 import BButton from '../Button'
 
 export default {
-  name: 'LoadingButton',
+  name: 'DisabledButton',
   components: {
     BButton,
   },

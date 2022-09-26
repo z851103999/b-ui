@@ -1,10 +1,8 @@
 <template>
   <div>
-    <b-button size="large" style="margin-right: 5px">large</b-button>
-    <b-button style="margin-right: 5px">default</b-button>
-    <b-button size="medium" style="margin-right: 5px">medium</b-button>
-    <b-button size="small" style="margin-right: 5px">small</b-button>
-    <b-button size="tiny" style="margin-right: 5px">tiny</b-button>
+    <b-button size="ms" color="primary">small</b-button>
+    <b-button style="margin-left: 5px" color="primary">medium</b-button>
+    <b-button size="lg" style="margin-left: 5px" color="primary">large</b-button>
   </div>
 </template>
 

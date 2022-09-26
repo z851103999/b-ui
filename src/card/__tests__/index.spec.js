@@ -1,5 +1,5 @@
 import example from '../example'
-import Card from '..'
+import Card from '../Card.vue'
 import { createApp } from 'vue'
 import { mount } from '@vue/test-utils'
 

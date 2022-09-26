@@ -1,9 +1,8 @@
 <template>
   <div>
-    <b-button type="primary" style="margin-right: 5px">Primary</b-button>
-    <b-button type="positive" style="margin-right: 5px">Positive</b-button>
-    <b-button type="negative" style="margin-right: 5px">Negative</b-button>
-    <b-button type="basic" style="margin-right: 5px">Basic</b-button>
+    <b-button variant="solid" color="primary">primary</b-button>
+    <b-button variant="solid" color="secondary" style="margin-left: 5px">secondary</b-button>
+    <b-button variant="solid" color="danger" style="margin-left: 5px">danger</b-button>
   </div>
 </template>
 

@@ -12,50 +12,63 @@ createApp().use(BButton)
 ### 基本样式
 
 ```vue
+import BasicButton from '../example/BasicButton.vue'
+```
+
+```html 
+<b-button variant="solid">Solid</b-button>
+<b-button>Outline</b-button>
+<b-button variant="text">text</b-button>
+```
+
+### 主题色
+```vue
 import TypeButton from '../example/TypeButton.vue'
 ```
 
-```html
-<b-button type='primary'>Primary</b-button>
-<b-button type='positive'>Positive</b-button>
-<b-button type='negative'>Negative</b-button>
-<b-button type='basic'>Basic</b-button>
+``` html
+<b-button variant="solid" color="primary">primary</b-button>
+<b-button variant="solid" color="secondary">secondary</b-button>
+<b-button variant="solid" color="danger">danger</b-button>
 ```
 
-### 大小
+### 尺寸
+
 ```vue
 import SizeButton from '../example/SizeButton.vue'
 ```
 
-```html
-<b-button size='large'>large</b-button>
-<b-button>default</b-button>
-<b-button size='meduim'>medium</b-button>
-<b-button size='small'>small</b-button>
-<b-button size='tiny'>tiny</b-button>
+``` html
+<b-button size="ms">small</b-button>
+<b-button>medium</b-button>
+<b-button size="lg">large</b-button>
 ```
 
-### 禁用
-
+### 禁用状态
 ```vue
 import DisabledButton from '../example/DisabledButton.vue'
 ```
 
 ```html
-<b-button>Disabled</b-button>
-<b-button disabled>Disabled</b-button>
-<b-button type='primary'>Disabled</b-button>
-<b-button disabled type='primary'>Disabled</b-button>
+  <div>
+    <b-button variant="solid">Solid</b-button>
+    <b-button>Outline</b-button>
+    <b-button variant="text">text</b-button>
+  </div>
+  <div>
+    <b-button variant="solid" disabled>Solid</b-button>
+    <b-button disabled>Outline</b-button>
+    <b-button variant="text" disabled>text</b-button>
+  </div>
 ```
 
-### loading
-
+### 图标按钮
 ```vue
-import LoadingButton from '../example/LoadingButton.vue'
+import IconButton from '../example/IconButton.vue'
 ```
 
 ```html
-<b-button loading>Disabled</b-button>
+<b-button icon="b-yingyezhizhao" variant="solid">yingyezhizhao</b-button>
 ```
 
 
@@ -63,19 +76,33 @@ import LoadingButton from '../example/LoadingButton.vue'
 
 ### button 属性
 
-| 参数         | 说明                                                     | 类型        | 默认值     | 
-|------------|--------------------------------------------------------|-----------|---------| 
-| `type`     | 按钮类型，可设置primary,position,negative,basic                | _string_  | --      |
-| `shape`    | 按钮形状，可设置circle或者省略                                     | _string_  | --      |
-| `size`     | 按钮大小，可设置为mini,tiny,small,medium,large,big,huge,massive | _string_  | --      |
-| `active`   | 设置按钮的活动状态                                              | _boolean_ | `false` |
-| `disabled` | 设置按钮的禁用状态                                              | _boolean_  | `false` |
-| `loading`  | 设置按钮的加载状态                                              | _boolean_  | `false` |
+| 参数       | 说明    | 类型        | 默认值 | 
+|--------------|------------------|----------|-------| 
+| `variant` | 按钮类型  | IButtonVariant   | `outline` |
+| `color` | 按钮主题  | IButtonColor   | `secondary` |
+| `size` | 按钮尺寸  | IButtonSize   | `md` |
+| `icon` | icon  | _string_   | -- |
+| `shape` | 圆角  | IButtonShape   | -- |
+| `disabled` | 是否禁用 button  | boolean   | -- |
 
-### buttons 属性
 
-| 参数     | 说明                                                    | 类型        | 默认值     | 
-|--------|-------------------------------------------------------|-----------|---------| 
-| `type` | 按钮类型，可设置primary,position,negative,basic               | _string_  | --      |
-| `size` | 按钮大小，可设置mini,tiny,small,medium,large,big,huge,massive | _string_  | --      |
+### Button类型
+#### IButtonVariant
+```ts
+type IButtonVariant = 'solid' | 'outline' | 'text';
+```
+#### IButtonSize
+```ts
+type IButtonSize = 'lg' | 'md' | 'sm';
+```
+
+#### IButtonColor
+```ts
+type IButtonColor = 'primary' | 'secondary' | 'danger';
+```
+
+#### IButtonShape
+```ts
+type IButtonShape = 'circle' | 'round';
+```
 
