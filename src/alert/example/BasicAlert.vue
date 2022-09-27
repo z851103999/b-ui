@@ -21,10 +21,7 @@ export default defineComponent({
 })
 </script>
 <style>
-div {
-  margin-top: 3px;
-}
 div:nth-child(1) {
-  margin-top: 0px;
+  margin-top: 0;
 }
 </style>

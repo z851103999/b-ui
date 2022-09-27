@@ -11,27 +11,35 @@
   padding: 8px 16px;
   line-height: 24px;
   border-radius: @b-border-radius;
+  display: flex;
+  align-items: center;
+  position: relative;
+  //width: 100%;
+  overflow: hidden;
+  vertical-align: middle;
 
-  // 默认换行规则
-  word-break: normal;
-  // 此属性指定 UA 是否可以在一行内的其他不允许的点处中断以防止溢出，当否则不可中断的字符串太长而无法放入行框时。只有当空白允许换行时它才有效。
-  word-wrap: break-word;
-
-  .b-close {
+  .b-alert-content {
+    display: flex;
+    padding: 0 16px 0 4px;
+    word-break: normal;
+    word-wrap: break-word;
+  }
+  .b-alert-close-icon {
     color: @b-text;
     opacity: 1;
     line-height: 26px;
     height: 24px;
-    display: inline;
-    float: right;
+    position: absolute;
+    right: 16px;
+    top: 8px;
 
     & > svg path {
-      fill: @b-light-text;
+      fill: @b-dark-text;
     }
 
     span {
       color: @b-text;
-      font-size: @b-font-size;
+      font-size: @font-size;
       font-weight: bold;
     }
   }
@@ -41,9 +49,21 @@
     border-color: @b-success-line;
     color: @b-text;
 
-    .b-close {
+    .b-alert-close-icon {
       & > svg path {
         fill: @b-success-line;
+      }
+    }
+  }
+
+  &.b-alert-info {
+    background-color: @b-info-bg;
+    border-color: @b-info-line;
+    color: @b-text;
+
+    .b-alert-close-icon {
+      & > svg path {
+        fill: @b-info-line;
       }
     }
   }
@@ -53,7 +73,7 @@
     border-color: @b-warning-line;
     color: @b-text;
 
-    .b-close {
+    .b-alert-close-icon {
       & > svg path {
         fill: @b-warning-line;
       }
@@ -65,33 +85,20 @@
     border-color: @b-danger-line;
     color: @b-text;
 
-    .b-close {
+    .b-alert-close-icon {
       & > svg path {
         fill: @b-danger-line;
       }
     }
   }
 
-  &.b-alert-info {
-    background-color: @b-info-bg;
-    border-color: @b-info-line;
-    color: @b-text;
-
-    .b-close {
-      & > svg path {
-        fill: @b-info-line;
-      }
-    }
-  }
-
   &.b-alert-simple {
-    background-color: @b-simple-bg;
-    border-color: @b-simple-line;
+    border-color: @b-line;
     color: @b-text;
 
-    .b-close {
+    .b-alert-close-icon {
       & > svg path {
-        fill: @b-info-line;
+        fill: @b-text-weak;
       }
     }
   }
@@ -100,7 +107,7 @@
     width: 16px;
     height: 16px;
     vertical-align: middle;
-    transform: translateY(-1px);
+    transform: translateY(-1px); //字体14px图标16px对齐问题，微调
   }
 
   .b-icon.b-icon-success {
@@ -108,11 +115,11 @@
       path {
         fill: @b-success-line;
       }
-    }
 
-    polygon {
-      fill: @b-light-text;
-      stroke: @b-light-text;
+      polygon {
+        fill: @b-light-text;
+        stroke: @b-light-text;
+      }
     }
   }
 
@@ -154,23 +161,10 @@
       }
     }
   }
-
-  .b-icon.b-icon-simple {
-    & > g {
-      path.b-icon-simple-outer {
-        fill: @b-simple-line;
-      }
-
-      path.b-icon-simple-inner {
-        fill: @b-light-text;
-        stroke: @b-light-text;
-      }
-    }
-  }
 }
 
-.b-alert-icon {
-  margin-right: 4px;
+.b-alert-close-icon {
+  margin-right: 6px;
 }
 
 .b-alter-close {
@@ -198,4 +192,8 @@
     transform-origin: 0% 0%;
     opacity: 0;
   }
+}
+
+.b-alert-center {
+  justify-content: center;
 }

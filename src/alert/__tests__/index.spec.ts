@@ -99,7 +99,7 @@ describe('alert dismiss', () => {
       }
     })
     expect(wrapper.find('.b-alert').exists()).toBe(true)
-    await wrapper.find('.b-close').trigger('click')
+    await wrapper.find('.b-alert-close-icon').trigger('click')
     // 时间倒计时器
     jest.advanceTimersByTime(2000)
     expect(wrapper.find('.b-alert').exists()).toBe(true)

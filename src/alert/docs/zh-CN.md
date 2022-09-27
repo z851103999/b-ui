@@ -39,6 +39,20 @@ import ShowIconAlert from '../example/ShowIconAlert.vue'
 </template>
 ```
 
+### 居中
+
+```vue
+import CenterAlert from '../example/CenterAlert.vue'
+```
+
+```html
+<b-alert type="success" :show-icon="true" :closeable="true" center>success</b-alert>
+<b-alert type="danger" :show-icon="true" :closeable="true" center>danger</b-alert>
+<b-alert type="warning" :show-icon="true" :closeable="true" center>warning</b-alert>
+<b-alert type="info" :show-icon="true" :closeable="true" center>info</b-alert>
+<b-alert type="simple" :show-icon="true" :closeable="true" center>simple</b-alert>
+```
+
 ### 自动关闭
 
 ```vue
@@ -60,6 +74,7 @@ import DismissTimeAlert from '../example/DismissTimeAlert.vue'
 | `closeable` |      `可选，默认显示关闭按钮`    |   _boolean_        |  `/`    |  `true`  |
 | `dismiss-time` |      `可选，自动关闭 alert 的延迟时间ms`    |   _number_        |  `/`    |  `info`  |
 | `show-icon` |      `可选，是否使用默认的类型图标`    |   _boolean_        |  `/`    |  `true`  |
+| `center`    | `可选 居中对齐`                     |   _boolean_        |  `--` |  `false`   |
 
 ### AlertType
 

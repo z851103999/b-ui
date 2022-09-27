@@ -9,7 +9,7 @@ import BAlert from '../Alert'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'BasicAlert',
+  name: 'DismissTImeAlert',
   components: {
     BAlert,
   },
