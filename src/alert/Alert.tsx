@@ -1,7 +1,7 @@
 import { defineComponent, onMounted, ref, Transition } from 'vue'
 import AlertCloseIcon from './alert-close-icon'
 import AlertTypeIcon from './alert-type-icon'
-import { alertProps } from './alert-types'
+import {AlertProps, alertProps} from './alert-types'
 
 import './alert.less'
 
@@ -11,7 +11,7 @@ export default defineComponent({
   name: 'BAlert',
   props: alertProps,
   emits: ['close'],
-  setup(props, { emit, slots }) {
+  setup(props:AlertProps, { emit, slots }) {
     const hide = ref(false)
     const closing = ref(false)
     const alertEl = ref()
@@ -38,7 +38,6 @@ export default defineComponent({
 
     return () => {
       const center: string = props.center ? 'b-alert-center' : ''
-      console.log(center)
       // const close = closing.value ? `b-alert-${props.type}` : ''
 
       return !hide.value ? (

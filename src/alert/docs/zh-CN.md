@@ -9,6 +9,8 @@ createApp().use(BAlert)
 
 ### 基本用法
 
+#### 基础
+
 ```vue
 import BAlert from '../example/BasicAlert.vue'
 ```
