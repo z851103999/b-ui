@@ -1,9 +1,5 @@
 <template>
-  <b-rate v-model="value1" type="success" :count="5" icon="coordinates" />
-  <br />
-  <b-rate v-model="value1" type="warning" :count="5" icon="coordinates" />
-  <br />
-  <b-rate v-model="value1" type="error" :count="5" icon="coordinates" />
+  <b-rate v-model="value1" :count="10" icon="coordinates" />
 </template>
 <script>
 import { ref, defineComponent } from 'vue';

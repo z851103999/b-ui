@@ -1,5 +1,7 @@
 <template>
   <b-rate v-model="valueReadonly"  :read="true"  />
+  <br />
+  <b-rate v-model='value' icon='coordinates'></b-rate>
 </template>
 <script>
 import { ref, defineComponent } from 'vue';
@@ -11,9 +13,10 @@ export default defineComponent({
 	},
   setup() {
     const valueReadonly = ref(5);
-
+    const value = ref(0)
     return {
       valueReadonly,
+      value
     };
 	}
 });
