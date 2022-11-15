@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'Basic',
+  name: 'B-UI',
   namespace: 'b',
-  title: 'Basic UI',
+  title: 'B-UI',
   logo: './logo.svg',
   useMobile: false,
   themes: {
@@ -160,17 +160,14 @@ module.exports = {
         },
         doc: 'rate',
         type: 12
+      },
+      {
+        text: {
+          'zh-CN': 'Message 消息'
+        },
+        doc: 'message',
+        type: 13
       }
     ]
   }
-  // mobile: {
-  //   redirect: '/home',
-  //   title: {
-  //     'zh-CN': '一个组件库',
-  //   },
-  //   header: {
-  //     i18n: null,
-  //     github: 'https://github.com/haoziqaq/varlet',
-  //   },
-  // },
 }
