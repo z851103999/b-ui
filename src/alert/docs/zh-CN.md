@@ -63,7 +63,7 @@ import DismissTimeAlert from '../example/DismissTimeAlert.vue'
 
 ```html
 <template>
-  <b-alert type="success" :show-icon="true" :closeable="true" dismiss-time="10000">10秒消失</b-alert>
+  <b-alert type="success" :show-icon="true" :closeable="true" :dismiss-time="10000">10秒消失</b-alert>
 </template>
 ```
 

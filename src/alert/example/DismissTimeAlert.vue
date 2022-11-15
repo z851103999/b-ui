@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-alert type="success" :show-icon="true" :closeable="true" dismiss-time="10000">10秒后消失</b-alert>
+    <b-alert type="success" :show-icon="true" :closeable="true" :dismiss-time="10000">10秒后消失</b-alert>
   </div>
 </template>
 
@@ -13,6 +13,7 @@ export default defineComponent({
   components: {
     BAlert,
   },
-  setup() {},
+  setup() {
+  },
 })
 </script>
