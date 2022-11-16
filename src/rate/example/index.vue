@@ -5,12 +5,12 @@
 
 <script>
 import AppType from '@varlet/cli/site/mobile/components/AppType'
-import BasicRate from './BasicRate.vue';
+import BasicRate from './BasicRate.vue'
 
 export default {
   components: {
     AppType,
-    BasicRate
-},
+    BasicRate,
+  },
 }
 </script>

@@ -7,7 +7,7 @@ import './rate.less'
 export default defineComponent({
   name: 'BRate',
   components: {
-    BIcon
+    BIcon,
   },
   props: rateProps,
   emits: ['change', 'update:modelValue'],
@@ -125,7 +125,7 @@ export default defineComponent({
       chooseValue,
       hoverToggle,
       selectValue,
-      onMouseleave
+      onMouseleave,
     }
   },
   render() {
@@ -202,5 +202,5 @@ export default defineComponent({
         ))}
       </div>
     )
-  }
+  },
 })

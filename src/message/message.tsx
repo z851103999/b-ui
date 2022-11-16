@@ -59,7 +59,7 @@ export default defineComponent({
 
     const classes = computed(() => ({
       'b-message': true,
-      [`b-message__${type.value}`]: true
+      [`b-message__${type.value}`]: true,
     }))
 
     // 偏移量
@@ -78,7 +78,7 @@ export default defineComponent({
     const renderIcon = computed(() => {
       const iconClasses = computed(() => ({
         [`b-message__image`]: true,
-        [`b-message__image--${type.value}`]: true
+        [`b-message__image--${type.value}`]: true,
       }))
       return (
         !(!type.value || type.value === 'normal') && (
@@ -96,7 +96,7 @@ export default defineComponent({
     const renderText = computed(() => {
       const textClasses = computed(() => ({
         'b-message__content': true,
-        [`b-message__content--${type.value}`]: true
+        [`b-message__content--${type.value}`]: true,
       }))
       return <span class={textClasses.value}>{message.value ? message.value : slots.default?.()}</span>
     })
@@ -124,5 +124,5 @@ export default defineComponent({
         </Transition>
       )
     }
-  }
+  },
 })

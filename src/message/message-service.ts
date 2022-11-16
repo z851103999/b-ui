@@ -1,91 +1,86 @@
-import { reactive } from 'vue';
-import { isString } from '@varlet/shared';
-import { MessageOption, VoidFn } from './message-types';
-import { instances, initInstance, deleteInstance } from './instance';
+import { reactive } from 'vue'
+import { isString } from '@varlet/shared'
+import { MessageOption, VoidFn } from './message-types'
+import { instances, initInstance, deleteInstance } from './instance'
 
 const defaultOptions: MessageOption = {
   duration: 3000,
   type: 'normal',
-};
+}
 
 const normalizeOptions = (params?: MessageOption | string) => {
-  const options: MessageOption =
-    !params || isString(params)
-      ? { message: params }
-      : params;
+  const options: MessageOption = !params || isString(params) ? { message: params } : params
 
   const normalized = {
     ...defaultOptions,
     ...options,
-  };
+  }
 
-  return normalized;
-};
+  return normalized
+}
 
-
-let seed = 0;
+let seed = 0
 function open(options: MessageOption): void {
-  const originOnClose: VoidFn | null = options.onClose || null;
-  const messageContent = options.message;
+  const originOnClose: VoidFn | null = options.onClose || null
+  const messageContent = options.message
   // let timer;
-  delete options.message;
+  delete options.message
 
   const props = reactive({
     ...defaultOptions,
     ...options,
     onClose: () => {
-      props.visible = false;
-      deleteInstance(props.id);
-      originOnClose?.();
+      props.visible = false
+      deleteInstance(props.id)
+      originOnClose?.()
     },
-  });
+  })
 
-  seed++;
-  const id = `message_${seed}`;
-  props.id = id;
-  const messageContext = initInstance(id, props, messageContent);
-  instances.push(messageContext);
-  props.visible = true;
-
+  seed++
+  const id = `message_${seed}`
+  props.id = id
+  const messageContext = initInstance(id, props, messageContent)
+  instances.push(messageContext)
+  props.visible = true
 }
 
 function message(params: MessageOption | string): void {
-  const options: MessageOption = normalizeOptions(params);
+  const options: MessageOption = normalizeOptions(params)
   open({
     ...options,
-  });
+  })
 }
 
 function success(params: MessageOption | string): void {
-  const options: MessageOption = normalizeOptions(params);
+  const options: MessageOption = normalizeOptions(params)
   open({
     ...options,
-    type: 'success'
-  });
+    type: 'success',
+  })
 }
 
 function error(params: MessageOption | string): void {
-  const options: MessageOption = normalizeOptions(params);
+  const options: MessageOption = normalizeOptions(params)
   open({
     ...options,
-    type: 'error'
-  });
+    type: 'error',
+  })
 }
 
 function warning(params: MessageOption | string): void {
-  const options: MessageOption = normalizeOptions(params);
+  const options: MessageOption = normalizeOptions(params)
   open({
     ...options,
-    type: 'warning'
-  });
+    type: 'warning',
+  })
 }
 
 function info(params: MessageOption | string): void {
-  const options: MessageOption = normalizeOptions(params);
+  const options: MessageOption = normalizeOptions(params)
   open({
     ...options,
-    type: 'info'
-  });
+    type: 'info',
+  })
 }
 
 const Message = Object.assign(message, {
@@ -93,6 +88,6 @@ const Message = Object.assign(message, {
   error,
   warning,
   info,
-});
+})
 
-export default Message;
+export default Message

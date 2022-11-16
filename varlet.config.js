@@ -26,7 +26,7 @@ module.exports = {
     'color-pc-language-active-background': '#00968821',
     'color-mobile-language-active': '#009688',
     'color-mobile-language-active-background': '#00968821',
-    'color-mobile-cell-hover': '#009688'
+    'color-mobile-cell-hover': '#009688',
   },
   darkThemes: {
     'color-body': '#121212',
@@ -50,124 +50,124 @@ module.exports = {
     'color-pc-language-active-background': '#00968821',
     'color-mobile-language-active': '#009688',
     'color-mobile-language-active-background': '#00968821',
-    'color-mobile-cell-hover': '#009688'
+    'color-mobile-cell-hover': '#009688',
   },
   highlight: {
-    style: './highlight.css'
+    style: './highlight.css',
   },
   pc: {
     redirect: '/home',
     title: {
-      'zh-CN': '一个组件库'
+      'zh-CN': '一个组件库',
     },
     header: {
       i18n: null,
-      github: 'https://github.com/haoziqaq/varlet'
+      github: 'https://github.com/haoziqaq/varlet',
     },
     menu: [
       {
         text: {
-          'zh-CN': '开发指南'
+          'zh-CN': '开发指南',
         },
-        type: 1
+        type: 1,
       },
       {
         text: {
-          'zh-CN': '基本介绍'
+          'zh-CN': '基本介绍',
         },
         doc: 'home',
-        type: 3
+        type: 3,
       },
       {
         text: {
-          'zh-CN': '基础组件'
+          'zh-CN': '基础组件',
         },
-        type: 1
+        type: 1,
       },
       {
         text: {
-          'zh-CN': 'Button 按钮'
+          'zh-CN': 'Button 按钮',
         },
         doc: 'button',
-        type: 2
+        type: 2,
       },
       {
         text: {
-          'zh-CN': 'Icon 图标'
+          'zh-CN': 'Icon 图标',
         },
         doc: 'icon',
-        type: 3
+        type: 3,
       },
       {
         text: {
-          'zh-CN': 'Layout 布局'
+          'zh-CN': 'Layout 布局',
         },
         doc: 'col',
-        type: 4
+        type: 4,
       },
       {
         text: {
-          'zh-CN': 'Space 间隔'
+          'zh-CN': 'Space 间隔',
         },
         doc: 'space',
-        type: 5
+        type: 5,
       },
       {
         text: {
-          'zh-CN': 'Card 卡片'
+          'zh-CN': 'Card 卡片',
         },
         doc: 'card',
-        type: 6
+        type: 6,
       },
       {
         text: {
-          'zh-CN': 'BreadCrumb 面包屑'
+          'zh-CN': 'BreadCrumb 面包屑',
         },
         doc: 'breadcrumb',
-        type: 7
+        type: 7,
       },
       {
         text: {
-          'zh-CN': 'Tag 标签'
+          'zh-CN': 'Tag 标签',
         },
         doc: 'tags',
-        type: 8
+        type: 8,
       },
       {
         text: {
-          'zh-CN': 'Slider 滑动输入条'
+          'zh-CN': 'Slider 滑动输入条',
         },
         doc: 'slider',
-        type: 9
+        type: 9,
       },
       {
         text: {
-          'zh-CN': 'Switch 开关'
+          'zh-CN': 'Switch 开关',
         },
         doc: 'switch',
-        type: 10
+        type: 10,
       },
       {
         text: {
-          'zh-CN': 'Alert 提示'
+          'zh-CN': 'Alert 提示',
         },
         doc: 'alert',
-        type: 11
+        type: 11,
       },
       {
         text: {
-          'zh-CN': 'Rate 评星'
+          'zh-CN': 'Rate 评星',
         },
         doc: 'rate',
-        type: 12
+        type: 12,
       },
       {
         text: {
-          'zh-CN': 'Message 消息'
+          'zh-CN': 'Message 消息',
         },
         doc: 'message',
-        type: 13
-      }
-    ]
-  }
+        type: 13,
+      },
+    ],
+  },
 }

@@ -1,7 +1,7 @@
 import Rate from './Rate'
 import type { App } from 'vue'
 
-Rate.install = function(app: App) {
+Rate.install = function (app: App) {
   app.component(Rate.name, Rate)
 }
 

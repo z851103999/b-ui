@@ -13,7 +13,6 @@ export default defineComponent({
   components: {
     BAlert,
   },
-  setup() {
-  },
+  setup() {},
 })
 </script>

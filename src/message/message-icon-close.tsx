@@ -9,5 +9,5 @@ export default defineComponent({
         <Icon name="close" size="14" />
       </div>
     )
-  }
+  },
 })

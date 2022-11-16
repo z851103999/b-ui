@@ -38,7 +38,7 @@ export const initInstance = (id: string, props: MessageOption, message?: string)
           {message}
         </Message>
       )
-    }
+    },
   })
 
   document.body.appendChild(container)
@@ -46,6 +46,6 @@ export const initInstance = (id: string, props: MessageOption, message?: string)
 
   return {
     id,
-    props
+    props,
   }
 }
