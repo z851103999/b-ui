@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import BButton from '../../button/Button.vue'
+import BButton from '../../button/Button'
 import BSpace from '../Space'
 
 export default {

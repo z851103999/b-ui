@@ -168,6 +168,13 @@ module.exports = {
         doc: 'message',
         type: 13,
       },
+      {
+        text:{
+          'zh-CN': 'Collapse 折叠'
+        },
+        doc:'collapse',
+        type: 14,
+      }
     ],
   },
 }

@@ -1,0 +1,124 @@
+@import '../style/index';
+
+.b-collapse {
+  font-size: @b-font-size;
+  background: @b-base-bg;
+  width: 100%;
+  overflow-y: auto;
+  box-shadow: @b-shadow-length-base @b-shadow;
+}
+
+:host {
+  display: block;
+}
+
+.b-collapse__item {
+  .b-collapse--overflow-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+.b-collapse__item-title {
+  display: block;
+  height: 45px;
+  //width: 100%;
+  padding: 0 28px 0 20px;
+  font-weight: 400;
+  line-height: 45px;
+  color: @b-text;
+  background-color: @b-base-bg;
+  cursor: pointer;
+
+  &.b-collapse__item--disabled {
+    color: @b-disabled-text;
+    cursor: not-allowed;
+  }
+
+  &:not(.b-collapse__item--disabled) {
+    &:hover {
+      background: @b-list-item-hover-bg;
+      color: @b-list-item-hover-text;
+    }
+  }
+}
+
+/* 展开图标相关 */
+.b-collapse__item > .b-collapse__item-title {
+  position: relative;
+
+  & > .b-collapse__open-icon {
+    display: inline-block;
+    text-indent: 0;
+    pointer-events: none; /* 让鼠标穿透 */
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    transition: transform ease-out 0.4s;
+
+    svg {
+      width: 16px;
+      height: 16px;
+
+      path {
+        fill: @b-text-weak;
+      }
+    }
+  }
+
+  &.b-collapse--open > .b-collapse__open-icon {
+    transform: rotate(180deg);
+    transform-origin: center;
+  }
+}
+
+/* 展开内容相关 */
+.b-collapse__item-content {
+  padding: 0 12px 0 20px;
+  line-height: 1.5;
+  color: @b-text-weak;
+}
+
+/* 下拉收起相关 */
+.b-collapse-transition-leave-active {
+  transition: all 0.4s ease-in-out;
+  animation: panelUpOut 0.4s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.b-collapse-transition-enter-active {
+  transition: all 0.4s ease-in-out;
+  animation: panelUpIn 0.4s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes panelUpOut {
+  0% {
+    transform: scaleY(1);
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: 0% 0%;
+    opacity: 0;
+  }
+}
+
+@keyframes panelUpIn {
+  0% {
+    transform: scaleY(0);
+    transform-origin: 0% 0%;
+    opacity: 0;
+  }
+
+  100% {
+    transform: scaleY(1);
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}

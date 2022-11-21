@@ -16,9 +16,9 @@
 - [ ] DropDown
 - [x] Tag  标签
 - [x] Switch
-- [ ] Cascader
+- [ ] Cascade
 - [ ] DatePicker
-- [ ] Message
+- [x] Message
 - [ ] Tree
 #### 初步构想编写如上组件
 
