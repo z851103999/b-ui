@@ -1,0 +1,129 @@
+@import '../style/index.less';
+
+.b-notification {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  width: 20em;
+  word-break: normal;
+  word-wrap: break-word;
+  z-index: 1060;
+
+  a {
+    &:link,
+    &:visited {
+      color: @b-link-light;
+    }
+
+    &:hover,
+    &:active {
+      color: @b-link-light-active;
+    }
+  }
+}
+
+.b-notification-item-container {
+  position: relative;
+  margin: 0 0 8px 0;
+  opacity: 0.95;
+  // webkit-filter: alpha(opacity=95);
+  box-shadow: @b-shadow-length-feedback-overlay @b-shadow;
+  border-radius: @b-border-radius-feedback;
+  color: @b-feedback-overlay-text;
+  background-color: @b-feedback-overlay-bg;
+}
+
+.b-notification__item {
+  position: relative;
+  display: block;
+  padding: 12px 16px;
+}
+
+.b-notification__icon-close {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  cursor: pointer;
+
+  & i.icon {
+    color: @b-light-text !important;
+  }
+}
+
+.b-notification__title {
+  font-size: @b-font-size-card-title;
+  padding: 0 0 calc(0.5em - 2px) 0;
+  display: block;
+  font-weight: 700;
+}
+
+.b-notification__image {
+  position: absolute;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  left: 16px;
+  top: 14px;
+  padding: 0;
+  line-height: 1;
+
+  &.b-notification__image-warning {
+    path.b-notification__warning-outer {
+      fill: @b-warning-line;
+    }
+
+    path.b-notification__warning-inner {
+      fill: @b-light-text;
+      stroke: @b-light-text;
+    }
+  }
+
+  &.b-notification__image-info {
+    background-color: @b-info;
+  }
+
+  &.b-notification__image-error {
+    background-color: @b-danger;
+  }
+
+  &.b-notification__image-success {
+    background-color: @b-success;
+  }
+
+  .b-notification__image-info-path,
+  .b-notification__image-error-path,
+  .b-notification__image-success-path {
+    fill: @b-light-text;
+  }
+}
+
+.b-notification__message {
+  margin-left: 20px;
+
+  .b-notification__content {
+    font-size: @b-font-size;
+    margin-top: 4px;
+  }
+}
+
+.b-notification-message-common .b-notification__message {
+  margin-left: 0;
+}
+
+.b-notification__message p {
+  font-size: @b-font-size;
+  margin-top: 4px;
+}
+
+.notification-fade {
+  &-enter-active,
+  &-leave-active {
+    transition: transform @b-animation-duration-slow @b-animation-ease-in-out;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    transform: translateX(100%);
+  }
+}

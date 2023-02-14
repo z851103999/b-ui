@@ -101,7 +101,7 @@ import CustomizeBreadcrumb from '../example/CustomizeBreadcrumb.vue'
 
 ### 接口定义
 
-``` ts
+```ts
 export interface SourceConfig {
   title: string // 显示名称
   link?: string // 跳转的路径

@@ -13,7 +13,7 @@ createApp().use(BRate)
 
 #### 基础
 
-```vue
+``` vue
 import BasicRate from '../example/BasicRate.vue'
 ```
 

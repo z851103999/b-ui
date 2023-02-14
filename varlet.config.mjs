@@ -123,6 +123,13 @@ export default defineConfig({
 				},
 				doc: 'collapse',
 				type: 14,
+			},
+			{
+				text: {
+					'zh-CN': 'Notification 全局通知'
+				},
+				doc: 'notification',
+				type: 15,
 			}
 		],
 	},
