@@ -10,17 +10,14 @@
 </template>
 
 <script>
-import AppType from '@varlet/cli/site/mobile/components/AppType'
 import ColumnSpace from './ColumnSpace.vue'
 import SizeSpace from './SizeSpace.vue'
 import FlexSpace from './FlexSpace'
 
 export default {
-  name: 'Spacer',
   components: {
     FlexSpace,
     // [Col.name]: Col,
-    AppType,
     ColumnSpace,
     SizeSpace,
   },

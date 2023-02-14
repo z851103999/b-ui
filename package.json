@@ -1,22 +1,26 @@
 {
-  "name": "basic-ui",
-  "version": "0.0.0",
-  "description": "A basic components library",
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "name": "b-ui",
+  "version": "1.0.0",
+  "description": "A components library example",
+  "main": "lib/varlet.cjs.js",
+  "module": "es/index.mjs",
   "typings": "types/index.d.ts",
-  "vetur": {
-    "tags": "highlight/tags.json",
-    "attributes": "highlight/attributes.json"
-  },
-  "web-types": "highlight/web-types.json",
+  "web-types": "highlight/web-types.en-US.json",
   "keywords": [
     "Vue",
     "UI"
   ],
   "license": "MIT",
+  "sideEffects": [
+    "es/**/style/*",
+    "lib/**/style/*",
+    "es/style.mjs",
+    "lib/style.js",
+    "*.css"
+  ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "simple-git-hooks",
     "dev": "varlet-cli dev",
     "build": "varlet-cli build",
     "preview": "varlet-cli preview",
@@ -26,41 +30,40 @@
     "release": "pnpm compile && varlet-cli release",
     "test": "varlet-cli jest",
     "test:watch": "varlet-cli jest -w",
-    "test:watchAll": "varlet-cli jest -wa"
+    "test:watchAll": "varlet-cli jest -wa",
+    "create": "varlet-cli create"
   },
   "peerDependencies": {
-    "vue": "^3.2.16"
+    "vue": "^3.2.0"
   },
   "devDependencies": {
-    "@types/jest": "^29.0.3",
-    "@varlet/cli": "^1.27.20",
-    "@varlet/eslint-config": "^1.27.20",
-    "@varlet/icons": "^1.27.20",
-    "@varlet/shared": "^1.27.20",
-    "@varlet/stylelint-config": "^1.27.20",
-    "@varlet/touch-emulator": "^1.27.20",
-    "@vue/test-utils": "2.0.0-rc.6",
-    "clipboard": "^2.0.11",
+    "@varlet/cli": "^2.7.5",
+    "@varlet/eslint-config": "^2.7.5",
+    "@varlet/icons": "^2.7.5",
+    "@varlet/stylelint-config": "^2.7.5",
+    "@varlet/touch-emulator": "^2.7.5",
+    "@varlet/shared": "^2.7.5",
+    "@vue/test-utils": "^2.0.2",
+    "clipboard": "^2.0.6",
     "eslint": "^7.30.0",
-    "jest": "29.0.3",
-    "lint-staged": "13.0.3",
-    "live-server": "^1.2.2",
+    "lint-staged": "^10.5.0",
+    "live-server": "^1.2.1",
     "lodash-es": "^4.17.21",
-    "prettier": "^2.7.1",
+    "prettier": "^2.3.2",
     "simple-git-hooks": "^2.8.0",
-    "stylelint": "14.12.1",
+    "stylelint": "^13.13.1",
     "typescript": "^4.4.4",
-    "vue": "3.2.39",
-    "vue-router": "4.1.5"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm exec lint-staged --allow-empty --concurrent false",
-    "commit-msg": "npx --no-install varlet-cli commit-lint $1"
+    "vue": "3.2.25",
+    "vue-router": "4.0.12"
   },
   "lint-staged": {
     "*.{ts,tsx,js,vue,less}": "prettier --write",
     "*.{ts,tsx,js,vue}": "eslint --fix",
     "*.{vue,css,less}": "stylelint --fix"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --allow-empty --concurrent false",
+    "commit-msg": "pnpm exec varlet-cli commit-lint $1"
   },
   "eslintConfig": {
     "root": true,
@@ -71,6 +74,9 @@
       "site/**",
       "public/**",
       "src/*/__tests__/**",
+      "coverage/**",
+      "highlight/**",
+      "types/index.d.ts",
       ".varlet/**"
     ],
     "extends": [
@@ -93,10 +99,10 @@
     ]
   },
   "browserslist": [
-    "Chrome >= 51",
+    "Chrome >= 54",
     "iOS >= 10"
   ],
-  "packageManager": "pnpm@6.24.3",
+  "packageManager": "pnpm@7.9.0",
   "files": [
     "es",
     "lib",

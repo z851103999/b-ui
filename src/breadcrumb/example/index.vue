@@ -5,12 +5,10 @@
 
 <script>
 import BasicBreadcrumb from './BasicBreadcrumb.vue'
-import AppType from '@varlet/cli/site/mobile/components/AppType'
 
 export default {
   components: {
     BasicBreadcrumb,
-    AppType,
   },
 }
 </script>

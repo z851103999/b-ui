@@ -7,7 +7,6 @@
 
 <script>
 import Button from '../Button'
-import AppType from '@varlet/cli/site/mobile/components/AppType'
 
 import BasicButton from './BasicButton'
 import TypeButton from './TypeButton'
@@ -16,7 +15,6 @@ export default {
   components: {
     TypeButton,
     [Button.name]: Button,
-    AppType,
     BasicButton,
   },
 }

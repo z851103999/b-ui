@@ -9,14 +9,12 @@
 <script>
 import TitleCard from './TitleCard'
 import ImageCard from './ImageCard.vue'
-import AppType from '@varlet/cli/site/mobile/components/AppType'
 
 export default {
   name: 'CardExample',
   components: {
     TitleCard,
     ImageCard,
-    AppType,
   },
   setup() {},
 }

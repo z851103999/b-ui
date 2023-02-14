@@ -7,12 +7,10 @@
 <script>
 import Alert from './Alert.tsx'
 import ShowIconAlertVue from './ShowIconAlert.vue'
-import AppType from '@varlet/cli/site/mobile/components/AppType'
 
 export default {
   components: {
     Alert,
-    AppType,
     ShowIconAlertVue,
   },
 }

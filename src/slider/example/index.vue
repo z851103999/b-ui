@@ -5,7 +5,6 @@
 </template>
 
 <script setup>
-import AppType from '@varlet/cli/site/mobile/components/AppType'
 import BaseSlider from './BaseSlider.vue'
 import StepSlider from './StepSlider.vue'
 </script>

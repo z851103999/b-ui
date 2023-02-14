@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import AppType from '@varlet/cli/site/mobile/components/AppType'
 import GroupCol from './GroupCol.vue'
 import GroupRow from './GroupRow.vue'
 import Combination from './Combination.vue'
@@ -24,7 +23,6 @@ export default {
   components: {
     // [Col.name]: Col,
     GroupCol,
-    AppType,
     GroupRow,
     Combination,
     FlexCol,
