@@ -3,6 +3,9 @@ import type { App } from 'vue'
 import { NotificationOption, VoidFn } from './notification-types'
 import Notification from './notification'
 
+/**
+ * 默认选项
+ */
 const defaultOptions: NotificationOption = {
   modelValue: false,
   duration: 3000,
@@ -15,6 +18,7 @@ const defaultOptions: NotificationOption = {
  * @param content
  */
 function initInstance(props: NotificationOption, content: string): App {
+  // console.log(props,content)
   const container = document.createElement('div')
   const app: App = createApp({
     setup() {
@@ -41,6 +45,7 @@ function close(props: NotificationOption, originOnClose: VoidFn | null): void {
 
 export default class NotificationService {
   static open(options: NotificationOption): void {
+    // console.log(options)   {title: '消息标题', content: '通知狂消息内容', duration: 5000, type: 'success', onClose: ƒ}
     const originOnClose: VoidFn | null = options.onClose || null
     const {content} = options
     let timer

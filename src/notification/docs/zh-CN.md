@@ -64,13 +64,15 @@ import ClickNotification from '../example/ClickNotification.vue'
 
 ### b-notification 参数
 
-| 参数       | 说明                         | 类型             | 默认值  |
-| ---------- | ---------------------------- | ---------------- | ------- |
-| `v-model`  | `组件调用必选，控制是否显示` | _boolean_        | `false` |
-| `content`  | `可选，消息内容`             | _string_         | --      |
-| `title`    | `可选，设置消息标题`         | _string_ | --      |
-| `type`     | `可选，设置消息类型`         | _NotificationType_         | 'normal'      |
-| `duration` | `可选，设置超时时间`         | _number_         | '3000'      |
+| 参数         | 说明                         | 类型                 | 默认值      |
+|------------| ---------------------------- |--------------------|----------|
+| `v-model`  | `组件调用必选，控制是否显示` | _boolean_          | `false`  |
+| `content`  | `可选，消息内容`             | _string_           | --       |
+| `title`    | `可选，设置消息标题`         | _string_           | --       |
+| `type`     | `可选，设置消息类型`         | _NotificationType_ | 'normal' |
+| `duration` | `可选，设置超时时间`         | _number_           | '3000'   |
+| `on-close` | `可选，设置消息关闭时的回调`         | _()=>void_         | --       |
+
 
 ### Notification 插槽
 
@@ -80,8 +82,7 @@ import ClickNotification from '../example/ClickNotification.vue'
 
 ### 类型定义
 
-NotificationType
-
+### NotificationType
 ```ts
 type NotificationType = 'normal' | 'success' | 'error' | 'warning' | 'info';
 ```
