@@ -13,7 +13,7 @@ const showComponent = () => {
     title: '消息标题',
     content: '通知狂消息内容',
     duration: 5000,
-    type: 'info',
+    type: 'success',
     onClose: () => {
       console.log('closed')
     },
