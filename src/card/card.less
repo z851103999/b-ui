@@ -6,7 +6,7 @@
 @card-title-font-size: @b-font-size-card-title;
 @card-subtitle-font-size: @b-font-size;
 @card-content-font-size: @b-font-size;
-
+/* stylelint-disable */
 .b-card {
   position: relative;
   display: block;
@@ -15,6 +15,12 @@
   box-shadow: @b-shadow-length-base @b-light-shadow;
   transition: box-shadow @b-animation-duration-slow @b-animation-ease-in-out-smooth,
     transform @b-animation-duration-slow @b-animation-ease-in-out-smooth;
+
+  &__shadow--hover:hover,
+  &__shadow--always {
+    box-shadow: @b-shadow-length-hover @b-light-shadow;
+    transform: translateY(-5px);
+  }
 }
 
 .b-card__title {
@@ -79,12 +85,4 @@
 
 .b-card__meta:first-child {
   margin-top: @card-block-space;
-}
-
-.b-card {
-  &__shadow--hover:hover,
-  &__shadow--always {
-    box-shadow: @b-shadow-length-hover @b-light-shadow;
-    transform: translateY(-5px);
-  }
 }

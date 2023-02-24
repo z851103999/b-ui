@@ -8,6 +8,48 @@
   border-radius: @b-border-radius;
   border: 1px none;
   background-color: transparent;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &.b-btn-icon {
+    padding: 8px;
+    line-height: 1em;
+    border: 1px solid transparent;
+
+    &.b-btn-xs,
+    &.b-btn-sm {
+      padding: 4px;
+    }
+
+    &.b-btn-xs {
+      min-width: 24px;
+    }
+
+    &.b-btn-sm {
+      min-width: 24px;
+    }
+
+    &.b-btn-lg {
+      .icon {
+        font-size: @b-font-size-icon;
+      }
+
+      min-width: 32px;
+    }
+  }
+
+  &:not(.b-btn-icon) {
+    .icon-fix {
+      font-size: @b-font-size-icon;
+    }
+  }
+  // -----
+  i {
+    margin-right: 5px;
+  }
 
   &:hover {
     cursor: pointer;
@@ -228,7 +270,7 @@
     min-width: 72px;
   }
 
-  &.b-btn-icon {
+  & .b-btn-icon {
     &:hover,
     &:focus {
       border: 1px solid @b-list-item-hover-bg;
@@ -269,51 +311,6 @@
   }
 }
 
-.b-btn {
-  transition: background-color 0.2s;
-  white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  &.b-btn-icon {
-    padding: 8px;
-    line-height: 1em;
-    border: 1px solid transparent;
-
-    &.b-btn-xs,
-    &.b-btn-sm {
-      padding: 4px;
-    }
-
-    &.b-btn-xs {
-      min-width: 24px;
-    }
-
-    &.b-btn-sm {
-      min-width: 24px;
-    }
-
-    &.b-btn-lg {
-      .icon {
-        font-size: @b-font-size-icon;
-      }
-
-      min-width: 32px;
-    }
-  }
-
-  &:not(.b-btn-icon) {
-    .icon-fix {
-      font-size: @b-font-size-icon;
-    }
-  }
-  // -----
-  i {
-    margin-right: 5px;
-  }
-}
-
 .b-icon-fix {
   position: relative;
   font-size: @b-font-size;
@@ -325,5 +322,5 @@
 }
 
 .clear-right-5 {
- margin-right: 5px;
+  margin-right: 5px;
 }

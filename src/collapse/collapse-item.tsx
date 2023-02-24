@@ -18,8 +18,7 @@ export default defineComponent({
       if (Array.isArray(collapse?.modelValue)) {
         return Boolean(collapse?.modelValue.length) && collapse?.modelValue.includes(props.name)
       }
-        return Boolean(collapse?.modelValue) && collapse?.modelValue === props.name
-
+      return Boolean(collapse?.modelValue) && collapse?.modelValue === props.name
     })
     // 点击标题
     const handlerTitleClick = (e: MouseEvent) => {

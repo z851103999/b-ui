@@ -5,7 +5,7 @@ const OpenIcon = (): JSX.Element => {
     viewBox: '0 0 16 16',
     version: '1.1',
     xmlns: 'http://www.w3.org/2000/svg',
-    'xmlns:xlink': 'http://www.w3.org/1999/xlink'
+    'xmlns:xlink': 'http://www.w3.org/1999/xlink',
   }
   return (
     <svg {...svgProps}>

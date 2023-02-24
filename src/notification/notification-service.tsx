@@ -47,7 +47,7 @@ export default class NotificationService {
   static open(options: NotificationOption): void {
     // console.log(options)   {title: '消息标题', content: '通知狂消息内容', duration: 5000, type: 'success', onClose: ƒ}
     const originOnClose: VoidFn | null = options.onClose || null
-    const {content} = options
+    const { content } = options
     let timer
     delete options.content
 
