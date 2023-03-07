@@ -4,7 +4,7 @@
 
 ```js
 import { createApp } from 'vue'
-import { BButton } from 'basic-ui'
+import { BButton } from 'b-ui'
 
 createApp().use(BButton)
 ```

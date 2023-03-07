@@ -1,14 +1,17 @@
-import example from '../example'
-import Card from '../Card.vue'
+import Card from '../Card'
 import { createApp } from 'vue'
 import { mount } from '@vue/test-utils'
 
-test('test card example', () => {
-  const wrapper = mount(example)
-  expect(wrapper.html()).toMatchSnapshot()
-})
 
-test('test card plugin', () => {
-  const app = createApp({}).use(Card)
-  expect(app.component(Card.name)).toBeTruthy()
+describe('card', () => {
+  it('should render correctly', async () => {
+    const wrapper = mount(Card);
+    expect(wrapper.element).toMatchSnapshot()
+  })
+
+  it('should render correctly', async () => {
+    const wrapper = mount({
+      
+    })
+  })
 })

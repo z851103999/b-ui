@@ -9,16 +9,6 @@ import { BCard } from 'basic-ui'
 createApp().use(BCard)
 ```
 
-### 基本样式
-
-```vue
-import TitleCard from '../example/TitleCard'
-```
-
-```html
-<b-card title='秋风' subtitle='秋风subtitle' :description='description'></b-card>
-```
-
 ### 添加图片内容
 
 ```vue
@@ -26,43 +16,50 @@ import ImageCard from '../example/ImageCard'
 ```
 
 ```html
-<template>
-  <b-card
-    title='风景'
-    subtitle='公园路的风景'
-    :description='description'
-    src='https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/a20012a2d4d5b9db43dfc6a01fe508c0.png~tplv-uwbnlip3yd-webp.webp'
-    shadow
-  >
-    <template #extra>
-      <b-button type='primary' style='margin-right: 10px'>添加按钮</b-button>
-      <b-button type='warning'>添加按钮</b-button>
-    </template>
-  </b-card>
-</template>
+<div style="width:400px">
+    <b-card class="card-demo-use-img"
+      :src="'https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png'" shadow="always">
+      <template #title>Vue标题</template>
+      <template #content>
+        内容----------内容-------------内容
+      </template>
+      <template #actions>
+        <div class="card-block"><b-icon name="like" /><span>12</span></div>
+        <div class="card-block"><b-icon name="collection" /><span>12</span></div>
+      </template>
+    </b-card>
+</div>
 ```
 
 ## API
 
 ### Card Props 属性
 
-| 参数            | 说明      | 类型              | 可选值                                          | 默认值     |
-|---------------|---------|-----------------|----------------------------------------------|---------| 
-| `title`       | _标题_    | _string_        | --                                           | --      |
-| `subtitle`    | _卡片副标题_ | _string_        | --                                           | --      |
-| `description` | _卡片描述_  | _string_        | --                                           | --      |
-| `src`         | _图片地址_  | _string_        | --                                           | --      |
-| `fit`         | _填充模式_  | _string_        | _fill_ _contain_ _cover_ _none_ _scale-down_ | _cover_ |
-| `alt`         | _替代文本_  | _string_        | --                                           | --      |
-| `height`      | _图片高度_  | _string丨number_ | --                                           | --      |
-| `shadow`      | _是否阴影_  | _boolean_       | --                                           | _flase_ |
+| 参数          | 说明         | 类型             | 默认值  |
+| ------------- | ------------ | ---------------- |  ------- |
+| `src`       | _图片路径_       | _string_         |  --      |
+| `align`    | _操作区域对其方式，起始,尾部，拉伸对其_ | _IAlignType_       | 'start'      |
+| `shadow` | _增强阴影_   | _IShadowType_          | 'hover'      |
 
 ### Card Slot 属性
 
-| 插槽            | 说明        | 参数  | 
-|---------------|-----------|-----|
-| `image`       | _自定义图片_   | --  | 
-| `title`       | _自定义标题_   | --  | 
-| `subtitle`    | _自定义副标题_  | --  | 
-| `description` | _自定义描述_   | --  | 
-| `extra`       | _自定义底部内容_ | --  | 
+| 插槽          | 说明             |
+| ------------- | ---------------- |
+| `avatar`       | _头像区域_     |
+| `title`       |   _卡片title_             |
+| `subtitle`    | _对标题的补充_   |
+| `action` | _决策作用_     |
+
+### Card 类型定义
+
+IAlignType
+
+```ts
+type IAlignType = 'start' | 'end' | 'spaceBetween'
+```
+
+IShadowType
+
+```ts
+type IShadowType = 'always' | 'hover' | 'never'
+```
